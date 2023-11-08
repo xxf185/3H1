@@ -124,7 +124,7 @@ download_cloudflared(){
   esac
 
   # install cloudflared linux
-  cf_url="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${cf_arch}"
+  cf_url="https://github.com/xxf185/cloudflared/releases/latest/download/cloudflared-linux-${cf_arch}"
   curl -sLo "/root/sbox/cloudflared-linux" "$cf_url"
   chmod +x /root/sbox/cloudflared-linux
   echo ""
