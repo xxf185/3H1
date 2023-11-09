@@ -68,6 +68,7 @@ regenarte_cloudflared_argo(){
 download_singbox(){
   arch=$(uname -m)
   echo "CPU架构: $arch"
+  echo ""
   # Map architecture names
   case ${arch} in
       x86_64)
