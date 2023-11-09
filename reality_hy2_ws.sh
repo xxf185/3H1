@@ -14,7 +14,7 @@ print_with_delay() {
 show_notice() {
     local message="$1"
     echo ""                       
-    echo "   ${message}  "
+    echo "——${message}——"
     echo ""
 }
 # Introduction animation
