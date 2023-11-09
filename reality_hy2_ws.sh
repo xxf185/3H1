@@ -689,7 +689,7 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           exit 0
           ;;
       5)
-          show_notice "升级Sing-box..."
+          show_notice "升级Sing-box"
           download_singbox
           # Check configuration and start the service
           if /root/sbox/sing-box check -c /root/sbox/sbconfig_server.json; then
