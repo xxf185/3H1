@@ -1,4 +1,4 @@
-#!/bin/bash
+端口号#!/bin/bash
 
 # Function to print characters with delay
 print_with_delay() {
@@ -652,6 +652,7 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           # Ask for listen port
           read -p "请输入想要修改的端口号 (当前端口为 $current_listen_port): " listen_port
           listen_port=${listen_port:-$current_listen_port}
+          echo ""
 
           # Get current server name
           current_server_name=$(jq -r '.inbounds[0].tls.server_name' /root/sbox/sbconfig_server.json)
