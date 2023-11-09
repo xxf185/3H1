@@ -611,7 +611,7 @@ install_base
 # Check if reality.json, sing-box, and sing-box.service already exist
 if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [ -f "/root/sbox/public.key.b64" ] && [ -f "/root/sbox/argo.txt.b64" ] && [ -f "/etc/systemd/system/sing-box.service" ]; then
 
-    echo "sing-box-reality-hysteria2已经安装"
+    echo "检测到配置已经安装"
     echo ""
     echo "请选择选项:"
     echo ""
@@ -622,11 +622,11 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
     echo "5. 更新sing-box内核"
     echo "6. 手动重启cloudflared"
     echo ""
-    read -p "Enter your choice (1-6): " choice
+    read -p "选择 (1-6): " choice
 
     case $choice in
         1)
-          show_notice "Reinstalling..."
+          show_notice "重新安装"
           # Uninstall previous installation
           systemctl stop sing-box
           systemctl disable sing-box > /dev/null 2>&1
@@ -690,7 +690,7 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           exit 0
           ;;
       5)
-          show_notice "Update Sing-box..."
+          show_notice "升级Sing-box..."
           download_singbox
           # Check configuration and start the service
           if /root/sbox/sing-box check -c /root/sbox/sbconfig_server.json; then
