@@ -21,9 +21,8 @@ show_notice() {
     echo "#######################################################################################################################"
 }
 # Introduction animation
-
-echo "------sing-reality-hy2-box------" 
 echo ""
+echo "------sing-reality-hy2-box------" 
 echo ""
 # install base
 install_base(){
