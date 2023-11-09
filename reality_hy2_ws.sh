@@ -588,7 +588,7 @@ EOF
 
 }
 uninstall_singbox() {
-            echo "Uninstalling..."
+            echo ""
           # Stop and disable sing-box service
           systemctl stop sing-box
           systemctl disable sing-box > /dev/null 2>&1
@@ -604,7 +604,7 @@ uninstall_singbox() {
           rm /root/self-cert/cert.pem
           rm -rf /root/self-cert/
           rm -rf /root/sbox/
-          echo "DONE!"
+          echo "卸载完成"
 }
 install_base
 
