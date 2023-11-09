@@ -53,6 +53,7 @@ regenarte_cloudflared_argo(){
   /root/sbox/cloudflared-linux tunnel --url http://localhost:$vmess_port --no-autoupdate --edge-ip-version auto --protocol h2mux>argo.log 2>&1 &
   sleep 2
   clear
+  echo ""
   echo 等待cloudflare argo生成地址
   echo ""
   sleep 5
