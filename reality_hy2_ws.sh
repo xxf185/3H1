@@ -54,6 +54,7 @@ regenarte_cloudflared_argo(){
   sleep 2
   clear
   echo 等待cloudflare argo生成地址
+  echo ""
   sleep 5
   #连接到域名
   argo=$(cat argo.log | grep trycloudflare.com | awk 'NR==2{print}' | awk -F// '{print $2}' | awk '{print $1}')
