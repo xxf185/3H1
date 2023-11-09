@@ -694,7 +694,7 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           download_singbox
           # Check configuration and start the service
           if /root/sbox/sing-box check -c /root/sbox/sbconfig_server.json; then
-              echo "Configuration checked successfully. Starting sing-box service..."
+              echo "升级成功. 启动sing-box服务"
               systemctl daemon-reload
               systemctl enable sing-box > /dev/null 2>&1
               systemctl start sing-box
@@ -908,7 +908,7 @@ EOF
 
 # Check configuration and start the service
 if /root/sbox/sing-box check -c /root/sbox/sbconfig_server.json; then
-    echo "Configuration checked successfully. Starting sing-box service..."
+    echo "启动sing-box服务"
     systemctl daemon-reload
     systemctl enable sing-box > /dev/null 2>&1
     systemctl start sing-box
