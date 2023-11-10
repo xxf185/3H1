@@ -26,6 +26,7 @@ install_base(){
   # Check if jq is installed, and install it if not
   if ! command -v jq &> /dev/null; then
       echo "安装jq..."
+      echo "" 
       if [ -n "$(command -v apt)" ]; then
           apt update > /dev/null 2>&1
           apt install -y jq > /dev/null 2>&1
