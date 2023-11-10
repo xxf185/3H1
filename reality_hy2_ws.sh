@@ -38,7 +38,7 @@ install_base(){
       elif [ -n "$(command -v dnf)" ]; then
           dnf install -y jq
       else
-          echo "Cannot install jq. Please install jq manually and rerun the script."
+          echo "无法安装jq. 请手动安装 jq 并重新运行脚本."
           exit 1
       fi
   fi
@@ -597,6 +597,7 @@ uninstall_singbox() {
           systemctl disable sing-box > /dev/null 2>&1
 
           # Remove files
+	  rm /root//usr/bin/jq
           rm /etc/systemd/system/sing-box.service
           rm /root/sbox/sbconfig_server.json
           rm /root/sbox/sing-box
@@ -633,6 +634,7 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           # Uninstall previous installation
           systemctl stop sing-box
           systemctl disable sing-box > /dev/null 2>&1
+	  rm /root//usr/bin/jq
           rm /etc/systemd/system/sing-box.service
           rm /root/sbox/sbconfig_server.json
           rm /root/sbox/sing-box
