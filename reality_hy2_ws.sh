@@ -597,7 +597,6 @@ uninstall_singbox() {
           systemctl disable sing-box > /dev/null 2>&1
 
           # Remove files
-	  rm /usr/bin/jq
           rm /etc/systemd/system/sing-box.service
           rm /root/sbox/sbconfig_server.json
           rm /root/sbox/sing-box
@@ -634,7 +633,6 @@ if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [
           # Uninstall previous installation
           systemctl stop sing-box
           systemctl disable sing-box > /dev/null 2>&1
-	  rm /usr/bin/jq
           rm /etc/systemd/system/sing-box.service
           rm /root/sbox/sbconfig_server.json
           rm /root/sbox/sing-box
