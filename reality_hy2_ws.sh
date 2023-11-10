@@ -612,10 +612,10 @@ install_base
 
 # Check if reality.json, sing-box, and sing-box.service already exist
 if [ -f "/root/sbox/sbconfig_server.json" ] && [ -f "/root/sbox/sing-box" ] && [ -f "/root/sbox/public.key.b64" ] && [ -f "/root/sbox/argo.txt.b64" ] && [ -f "/etc/systemd/system/sing-box.service" ]; then
-
+    echo ""
     echo "检测到配置已经安装"
     echo ""
-    echo "请选择选项:"
+    echo "选项:"
     echo ""
     echo "1. 重新安装"
     echo "2. 修改配置"
