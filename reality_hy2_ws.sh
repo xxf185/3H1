@@ -19,7 +19,7 @@ show_notice() {
 }
 # Introduction animation
 echo ""
-echo "------sing-reality-hy2-box------" 
+echo "------sing-reality-hy2-ws-box------" 
 echo ""
 # install base
 install_base(){
